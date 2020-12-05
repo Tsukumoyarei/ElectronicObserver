@@ -992,12 +992,19 @@
       <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
       <Name>WinFormsUI</Name>
     </ProjectReference>
+	<ProjectReference Include="..\ElectronicObserverUpdater\ElectronicObserverUpdater.csproj">
+      <Project>{83DF5838-CF4B-430F-A1A7-0FE38C28CF00}</Project>
+      <Name>ElectronicObserverUpdater</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--
   <PropertyGroup>
     <PostBuildEvent>xcopy /E /Y "$(TargetDir)." "$(ProjectDir)..\output\ElectronicObserver\"</PostBuildEvent>
   </PropertyGroup>
+  -->
+  
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
