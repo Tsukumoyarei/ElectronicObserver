@@ -35,8 +35,6 @@ build_script:
     - xcopy /E /Y output-template output-cef-full\
     - xcopy /E /Y output\ElectronicObserver output-cef-full\
     - xcopy /E /Y output\Browser output-cef-full\
-    - xcopy /E /Y output\ElectronicObserverUpdater.exe output-cef-full\
-    - xcopy /E /Y output\ElectronicObserverUpdater.exe.config output-cef-full\
     - xcopy /E output-cef-full output-cef\
     - rmdir /S /Q output-cef\x86
     - rmdir /S /Q output-cef\x64
