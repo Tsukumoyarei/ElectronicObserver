@@ -93,6 +93,8 @@
             this.StripMenu_Tool_BaseAirCorpsSimulation = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Tool_ExpChecker = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Tool_ExpeditionCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorPlugins = new System.Windows.Forms.ToolStripSeparator();
+            this.StripMenu_Tool_PluginManager = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Debug = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Debug_LoadAPIFromFile = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Debug_LoadInitialAPI = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,14 +107,13 @@
             this.StripMenu_Help_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.SeparatorWhitecap = new System.Windows.Forms.ToolStripSeparator();
             this.StripMenu_Help_Version = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripStatus = new System.Windows.Forms.StatusStrip();
             this.StripStatus_Information = new System.Windows.Forms.ToolStripStatusLabel();
             this.StripStatus_Clock = new System.Windows.Forms.ToolStripStatusLabel();
             this.UIUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.MainDockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.toolStripSeparatorPlugins = new System.Windows.Forms.ToolStripSeparator();
-            this.StripMenu_Tool_PluginManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forceUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu.SuspendLayout();
             this.StripStatus.SuspendLayout();
             this.SuspendLayout();
@@ -615,6 +616,18 @@
             this.StripMenu_Tool_ExpeditionCheck.Text = "遠征可否チェック(&M)";
             this.StripMenu_Tool_ExpeditionCheck.Click += new System.EventHandler(this.StripMenu_Tool_ExpeditionCheck_Click);
             // 
+            // toolStripSeparatorPlugins
+            // 
+            this.toolStripSeparatorPlugins.Name = "toolStripSeparatorPlugins";
+            this.toolStripSeparatorPlugins.Size = new System.Drawing.Size(189, 6);
+            // 
+            // StripMenu_Tool_PluginManager
+            // 
+            this.StripMenu_Tool_PluginManager.Name = "StripMenu_Tool_PluginManager";
+            this.StripMenu_Tool_PluginManager.Size = new System.Drawing.Size(192, 22);
+            this.StripMenu_Tool_PluginManager.Text = "&Plugins";
+            this.StripMenu_Tool_PluginManager.Click += new System.EventHandler(this.pluginsToolStripMenuItem_Click);
+            // 
             // StripMenu_Debug
             // 
             this.StripMenu_Debug.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -682,7 +695,8 @@
             this.StripMenu_Help_Help,
             this.SeparatorWhitecap,
             this.StripMenu_Help_Version,
-            this.checkUpdateToolStripMenuItem});
+            this.checkUpdateToolStripMenuItem,
+            this.forceUpdateToolStripMenuItem});
             this.StripMenu_Help.Name = "StripMenu_Help";
             this.StripMenu_Help.Size = new System.Drawing.Size(73, 21);
             this.StripMenu_Help.Text = "ヘルプ(&H)";
@@ -706,6 +720,13 @@
             this.StripMenu_Help_Version.Size = new System.Drawing.Size(198, 22);
             this.StripMenu_Help_Version.Text = "バージョン情報(&V)";
             this.StripMenu_Help_Version.Click += new System.EventHandler(this.StripMenu_Help_Version_Click);
+            // 
+            // checkUpdateToolStripMenuItem
+            // 
+            this.checkUpdateToolStripMenuItem.Name = "checkUpdateToolStripMenuItem";
+            this.checkUpdateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.checkUpdateToolStripMenuItem.Text = "Check Update";
+            this.checkUpdateToolStripMenuItem.Click += new System.EventHandler(this.checkUpdateToolStripMenuItem_Click);
             // 
             // StripStatus
             // 
@@ -753,25 +774,12 @@
             this.MainDockPanel.Size = new System.Drawing.Size(640, 433);
             this.MainDockPanel.TabIndex = 0;
             // 
-            // checkUpdateToolStripMenuItem
+            // forceUpdateToolStripMenuItem
             // 
-            this.checkUpdateToolStripMenuItem.Name = "checkUpdateToolStripMenuItem";
-            this.checkUpdateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.checkUpdateToolStripMenuItem.Text = "Check Update";
-            this.checkUpdateToolStripMenuItem.Click += new System.EventHandler(this.checkUpdateToolStripMenuItem_Click);
-
-            // 
-            // toolStripSeparatorPlugins
-            // 
-            this.toolStripSeparatorPlugins.Name = "toolStripSeparatorPlugins";
-            this.toolStripSeparatorPlugins.Size = new System.Drawing.Size(197, 6);
-            // 
-            // StripMenu_Tool_PluginManager
-            // 
-            this.StripMenu_Tool_PluginManager.Name = "StripMenu_Tool_PluginManager";
-            this.StripMenu_Tool_PluginManager.Size = new System.Drawing.Size(200, 26);
-            this.StripMenu_Tool_PluginManager.Text = "&Plugins";
-            this.StripMenu_Tool_PluginManager.Click += new System.EventHandler(this.pluginsToolStripMenuItem_Click);
+            this.forceUpdateToolStripMenuItem.Name = "forceUpdateToolStripMenuItem";
+            this.forceUpdateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.forceUpdateToolStripMenuItem.Text = "Force Update";
+            this.forceUpdateToolStripMenuItem.Click += new System.EventHandler(this.forceUpdateToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -885,5 +893,6 @@
 
         private System.Windows.Forms.ToolStripSeparator toolStripSeparatorPlugins;
         private System.Windows.Forms.ToolStripMenuItem StripMenu_Tool_PluginManager;
+		private System.Windows.Forms.ToolStripMenuItem forceUpdateToolStripMenuItem;
 	}
 }

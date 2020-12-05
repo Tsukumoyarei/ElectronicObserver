@@ -1791,5 +1791,14 @@ namespace ElectronicObserver.Window
 		{
 			SoftwareInformation.CheckUpdate();
 		}
+
+		private void forceUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Utility.Logger.Add(1, "Forcing to update...");
+			var p = new System.Diagnostics.Process();
+			p.StartInfo.FileName = "ElectronicObserverUpdater.exe";
+			p.StartInfo.Arguments = "";
+			p.Start();
+		}
 	}
 }

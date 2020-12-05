@@ -35,7 +35,7 @@ namespace ElectronicObserverUpdater.Utillity
 			var root = source.Entries[0]?.FullName;
 			foreach (ZipArchiveEntry entry in source.Entries)
 			{
-				if (entry.Name != "ElectronicObserverUpdater.exe" || entry.Name != "ElectronicObserverUpdater.exe.config" || entry.Name != "ElectronicObserverUpdater.pdb")
+				if (entry.Name != "ElectronicObserverUpdater.exe" && entry.Name != "ElectronicObserverUpdater.exe.config" && entry.Name != "ElectronicObserverUpdater.pdb" && entry.Name != "v8_context_snapshot.bin")
 				{
 					count++;
 				//Remove zip file Root directory from path.
