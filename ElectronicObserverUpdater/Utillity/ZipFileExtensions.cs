@@ -35,7 +35,9 @@ namespace ElectronicObserverUpdater.Utillity
 			var root = source.Entries[0]?.FullName;
 			foreach (ZipArchiveEntry entry in source.Entries)
 			{
-				count++;
+				if (entry.FullName != "ElectronicObserverUpdater.exe" || entry.FullName != "ElectronicObserverUpdater.exe.config" || entry.FullName != "ElectronicObserverUpdater.pdb")
+				{
+					count++;
 				//Remove zip file Root directory from path.
 				var newName = entry.FullName;//.Substring(root.Length); // Man What The Fuck?
 				string fileDestinationPath = Path.Combine(destinationDirectoryFullPath, newName);
@@ -44,8 +46,8 @@ namespace ElectronicObserverUpdater.Utillity
 					throw new IOException("File is extracting to outside of the folder specified.");
 
 				//Report extracting progress.
-				var zipProgress = new ZipProgress(source.Entries.Count, count, entry.FullName);
-				progress.Report(zipProgress);
+					var zipProgress = new ZipProgress(source.Entries.Count, count, entry.FullName);
+					progress.Report(zipProgress);
 
 				if (Path.GetFileName(fileDestinationPath).Length == 0)
 				{
@@ -65,6 +67,7 @@ namespace ElectronicObserverUpdater.Utillity
 						Directory.CreateDirectory(Path.GetDirectoryName(fileDestinationPath));
 						entry.ExtractToFile(fileDestinationPath, overwrite: overwrite);
 					}
+				}
 				}
 			}
 		}
