@@ -113,7 +113,6 @@
             this.StripStatus_Clock = new System.Windows.Forms.ToolStripStatusLabel();
             this.UIUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.MainDockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.forceUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu.SuspendLayout();
             this.StripStatus.SuspendLayout();
             this.SuspendLayout();
@@ -695,8 +694,7 @@
             this.StripMenu_Help_Help,
             this.SeparatorWhitecap,
             this.StripMenu_Help_Version,
-            this.checkUpdateToolStripMenuItem,
-            this.forceUpdateToolStripMenuItem});
+            this.checkUpdateToolStripMenuItem});
             this.StripMenu_Help.Name = "StripMenu_Help";
             this.StripMenu_Help.Size = new System.Drawing.Size(73, 21);
             this.StripMenu_Help.Text = "ヘルプ(&H)";
@@ -773,13 +771,6 @@
             this.MainDockPanel.ShowDocumentIcon = true;
             this.MainDockPanel.Size = new System.Drawing.Size(640, 433);
             this.MainDockPanel.TabIndex = 0;
-            // 
-            // forceUpdateToolStripMenuItem
-            // 
-            this.forceUpdateToolStripMenuItem.Name = "forceUpdateToolStripMenuItem";
-            this.forceUpdateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.forceUpdateToolStripMenuItem.Text = "Force Update";
-            this.forceUpdateToolStripMenuItem.Click += new System.EventHandler(this.forceUpdateToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -893,6 +884,5 @@
 
         private System.Windows.Forms.ToolStripSeparator toolStripSeparatorPlugins;
         private System.Windows.Forms.ToolStripMenuItem StripMenu_Tool_PluginManager;
-		private System.Windows.Forms.ToolStripMenuItem forceUpdateToolStripMenuItem;
 	}
 }
