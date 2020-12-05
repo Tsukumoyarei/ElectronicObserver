@@ -27,9 +27,6 @@ before_build:
     - mkdir output-template\Plugins
     - copy NUL output-template\Plugins\plugin_dir
 
-build:
-  project: ElectronicObserver.sln
-
 build_script:
     - git submodule update --init --recursive
     - nuget restore
