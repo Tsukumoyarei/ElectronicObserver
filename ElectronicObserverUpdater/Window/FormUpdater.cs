@@ -20,7 +20,7 @@ namespace ElectronicObserverUpdater
 		/// Base Url of update file.
 		/// Two parameters should be replaced when download file.
 		/// </summary>
-		private static string BASE_URL = "https://github.com/Tsukumoyarei/ElectronicObserver/releases/download/{0}/74eo-joint.zip";
+		private static string BASE_URL = "https://github.com/Tsukumoyarei/ElectronicObserver/releases/download/{0}/74eo-joint-{0}.zip";
 		public string Version { get; set; } = "";
 		public bool IsSetBaseSize { get; private set; }
 
