@@ -20,17 +20,6 @@
 			base.Dispose(disposing);
 		}
 
-		protected override System.Windows.Forms.CreateParams CreateParams
-		{
-			get
-			{
-				System.Windows.Forms.CreateParams cp = base.CreateParams;
-				// turn on WS_EX_TOOLWINDOW style bit
-				cp.ExStyle |= 0x80;
-				return cp;
-			}
-		}
-
 		#region Windows Form Designer generated code
 
 		/// <summary>
@@ -49,7 +38,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			//this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
             this.Name = "FormBrowserHost";
             this.Text = "ブラウザ";
