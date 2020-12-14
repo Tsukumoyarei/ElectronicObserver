@@ -48,6 +48,17 @@ namespace Browser
 		private IntPtr HostWindow;
 
 
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				CreateParams cp = base.CreateParams;
+				// turn on WS_EX_TOOLWINDOW style bit
+				cp.ExStyle |= 0x80;
+				return cp;
+			}
+		}
+
 		private ChromiumWebBrowser Browser = null;
 
 		private string ProxySettings = null;
@@ -113,6 +124,7 @@ namespace Browser
 		public FormBrowser(string serverUri)
 		{
 			InitializeComponent();
+			this.ShowInTaskbar = false;
 
 			ServerUri = serverUri;
 			StyleSheetApplied = false;

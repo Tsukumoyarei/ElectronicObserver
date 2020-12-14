@@ -82,21 +82,10 @@ namespace ElectronicObserver.Window
 		}
 
 
-		protected override CreateParams CreateParams
-		{
-			get
-			{
-				CreateParams cp = base.CreateParams;
-				// turn on WS_EX_TOOLWINDOW style bit
-				cp.ExStyle |= 0x80;
-				return cp;
-			}
-		}
 
 		public FormBrowserHost(FormMain parent)
 		{
 			InitializeComponent();
-			this.ShowInTaskbar = false;
 
 			Icon = ResourceManager.ImageToIcon(ResourceManager.Instance.Icons.Images[(int)ResourceManager.IconContent.FormBrowser]);
 		}
