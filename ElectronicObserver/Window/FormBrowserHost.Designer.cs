@@ -20,6 +20,17 @@
 			base.Dispose(disposing);
 		}
 
+		protected override System.Windows.Forms.CreateParams CreateParams
+		{
+			get
+			{
+				System.Windows.Forms.CreateParams cp = base.CreateParams;
+				// turn on WS_EX_TOOLWINDOW style bit
+				cp.ExStyle |= 0x80;
+				return cp;
+			}
+		}
+
 		#region Windows Form Designer generated code
 
 		/// <summary>
@@ -46,6 +57,7 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormBrowserHost_Paint);
             this.Resize += new System.EventHandler(this.FormBrowserHost_Resize);
             this.ResumeLayout(false);
+			this.ShowInTaskbar = false;
 
 		}
 
