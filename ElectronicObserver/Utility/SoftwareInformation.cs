@@ -119,7 +119,6 @@ namespace ElectronicObserver.Utility
 							p.StartInfo.FileName = "ElectronicObserverUpdater.exe";
 							p.StartInfo.Arguments = version;
 							p.Start();
-
 						}
 						else if (result == System.Windows.Forms.DialogResult.Cancel)
 						{

@@ -316,7 +316,14 @@ namespace ElectronicObserver.Notifier
 				+ "&notificationId=74eo&deviceId=b284390249214aebadd32a241653a49c&apikey=" + JoinApi;
 				using (var wb = new WebClient())
 				{
-					var response = wb.DownloadString(url);
+					try
+					{
+						var response = wb.DownloadString(url);
+					}
+					catch (Exception e)
+					{
+						Utility.Logger.Add(2, "Failed to push notification via Join: "+e.Message);
+					}
 				}
 			}
 

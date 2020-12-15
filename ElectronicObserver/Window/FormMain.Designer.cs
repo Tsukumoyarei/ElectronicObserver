@@ -93,6 +93,8 @@
             this.StripMenu_Tool_BaseAirCorpsSimulation = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Tool_ExpChecker = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Tool_ExpeditionCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparatorPlugins = new System.Windows.Forms.ToolStripSeparator();
+            this.StripMenu_Tool_PluginManager = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Debug = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Debug_LoadAPIFromFile = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu_Debug_LoadInitialAPI = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,14 +107,12 @@
             this.StripMenu_Help_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.SeparatorWhitecap = new System.Windows.Forms.ToolStripSeparator();
             this.StripMenu_Help_Version = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripStatus = new System.Windows.Forms.StatusStrip();
             this.StripStatus_Information = new System.Windows.Forms.ToolStripStatusLabel();
             this.StripStatus_Clock = new System.Windows.Forms.ToolStripStatusLabel();
             this.UIUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.MainDockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.toolStripSeparatorPlugins = new System.Windows.Forms.ToolStripSeparator();
-            this.StripMenu_Tool_PluginManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenu.SuspendLayout();
             this.StripStatus.SuspendLayout();
             this.SuspendLayout();
@@ -615,6 +615,18 @@
             this.StripMenu_Tool_ExpeditionCheck.Text = "遠征可否チェック(&M)";
             this.StripMenu_Tool_ExpeditionCheck.Click += new System.EventHandler(this.StripMenu_Tool_ExpeditionCheck_Click);
             // 
+            // toolStripSeparatorPlugins
+            // 
+            this.toolStripSeparatorPlugins.Name = "toolStripSeparatorPlugins";
+            this.toolStripSeparatorPlugins.Size = new System.Drawing.Size(189, 6);
+            // 
+            // StripMenu_Tool_PluginManager
+            // 
+            this.StripMenu_Tool_PluginManager.Name = "StripMenu_Tool_PluginManager";
+            this.StripMenu_Tool_PluginManager.Size = new System.Drawing.Size(192, 22);
+            this.StripMenu_Tool_PluginManager.Text = "&Plugins";
+            this.StripMenu_Tool_PluginManager.Click += new System.EventHandler(this.pluginsToolStripMenuItem_Click);
+            // 
             // StripMenu_Debug
             // 
             this.StripMenu_Debug.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -707,6 +719,13 @@
             this.StripMenu_Help_Version.Text = "バージョン情報(&V)";
             this.StripMenu_Help_Version.Click += new System.EventHandler(this.StripMenu_Help_Version_Click);
             // 
+            // checkUpdateToolStripMenuItem
+            // 
+            this.checkUpdateToolStripMenuItem.Name = "checkUpdateToolStripMenuItem";
+            this.checkUpdateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.checkUpdateToolStripMenuItem.Text = "Check Update";
+            this.checkUpdateToolStripMenuItem.Click += new System.EventHandler(this.checkUpdateToolStripMenuItem_Click);
+            // 
             // StripStatus
             // 
             this.StripStatus.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -752,26 +771,6 @@
             this.MainDockPanel.ShowDocumentIcon = true;
             this.MainDockPanel.Size = new System.Drawing.Size(640, 433);
             this.MainDockPanel.TabIndex = 0;
-            // 
-            // checkUpdateToolStripMenuItem
-            // 
-            this.checkUpdateToolStripMenuItem.Name = "checkUpdateToolStripMenuItem";
-            this.checkUpdateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.checkUpdateToolStripMenuItem.Text = "Check Update";
-            this.checkUpdateToolStripMenuItem.Click += new System.EventHandler(this.checkUpdateToolStripMenuItem_Click);
-
-            // 
-            // toolStripSeparatorPlugins
-            // 
-            this.toolStripSeparatorPlugins.Name = "toolStripSeparatorPlugins";
-            this.toolStripSeparatorPlugins.Size = new System.Drawing.Size(197, 6);
-            // 
-            // StripMenu_Tool_PluginManager
-            // 
-            this.StripMenu_Tool_PluginManager.Name = "StripMenu_Tool_PluginManager";
-            this.StripMenu_Tool_PluginManager.Size = new System.Drawing.Size(200, 26);
-            this.StripMenu_Tool_PluginManager.Text = "&Plugins";
-            this.StripMenu_Tool_PluginManager.Click += new System.EventHandler(this.pluginsToolStripMenuItem_Click);
             // 
             // FormMain
             // 
