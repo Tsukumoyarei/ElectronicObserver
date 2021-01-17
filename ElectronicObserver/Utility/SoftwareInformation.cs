@@ -29,7 +29,7 @@ namespace ElectronicObserver.Utility
 		/// <summary>
 		/// バージョン(日本語, ソフトウェア名を含みます)
 		/// </summary>
-		public static string VersionJapanese => SoftwareNameJapanese + "四六型改四 Joint Operation Mk.7";
+		public static string VersionJapanese => SoftwareNameJapanese + "四六型改五 Joint Operation Mk.8";
 
 
 		/// <summary>
@@ -42,7 +42,7 @@ namespace ElectronicObserver.Utility
 		/// <summary>
 		/// 更新日時
 		/// </summary>
-		public static DateTime UpdateTime => DateTimeHelper.CSVStringToTime("2021/01/13 19:00:00");
+		public static DateTime UpdateTime => DateTimeHelper.CSVStringToTime("2021/01/17 14:30:00");
 
 
 

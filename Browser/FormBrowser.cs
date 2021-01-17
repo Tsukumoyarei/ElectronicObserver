@@ -47,7 +47,7 @@ namespace Browser
 		private Timer HeartbeatTimer = new Timer();
 		private IntPtr HostWindow;
 
-
+		/*
 		protected override CreateParams CreateParams
 		{
 			get
@@ -58,6 +58,7 @@ namespace Browser
 				return cp;
 			}
 		}
+		*/
 
 		private ChromiumWebBrowser Browser = null;
 
@@ -124,7 +125,7 @@ namespace Browser
 		public FormBrowser(string serverUri)
 		{
 			InitializeComponent();
-			this.ShowInTaskbar = false;
+			//this.ShowInTaskbar = false;
 
 			ServerUri = serverUri;
 			StyleSheetApplied = false;
